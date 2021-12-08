@@ -1,3 +1,18 @@
+#Discord bot made in python(simple with just a few functions)
+#Copyright (C) 2021 Andrei Napruiu
+#Copyright (C) 2021 IDST LAB 03 - Python Discord Bot
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #!./.venv/bin/python
  
 import discord      # base discord module
@@ -281,6 +296,5 @@ if __name__ == '__main__':
     if 'BOT_TOKEN' not in os.environ:
         log_msg('save your token in the BOT_TOKEN env variable!', 'error')
         exit(-1)
- 
     # launch bot (blocking operation)
     bot.run(os.environ['BOT_TOKEN'])
