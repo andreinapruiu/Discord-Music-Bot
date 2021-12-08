@@ -15,6 +15,7 @@
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #!./.venv/bin/python
  
+import argparse
 import discord      # base discord module
 import code         # code.interact
 import os           # environment variables
@@ -68,6 +69,8 @@ def log_msg(msg: str, level: str):
          caller.function, caller.lineno,
          _extra_ansi['unbold'], msg, _extra_ansi['clear']))
  
+parser = argparse.ArgumentParser()
+parser.add_argument("log_msg", token=log_msg('save your token in the BOT_TOKEN env variable!', 'error'))
 ################################################################################
 ############################## BOT IMPLEMENTATION ##############################
 ################################################################################
@@ -296,6 +299,5 @@ if __name__ == '__main__':
     if 'BOT_TOKEN' not in os.environ:
         log_msg('save your token in the BOT_TOKEN env variable!', 'error')
         exit(-1)
-    #this right here is my edit to the script=))))
     # launch bot (blocking operation)
     bot.run(os.environ['BOT_TOKEN'])
