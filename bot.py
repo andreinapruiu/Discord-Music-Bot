@@ -296,5 +296,6 @@ if __name__ == '__main__':
     if 'BOT_TOKEN' not in os.environ:
         log_msg('save your token in the BOT_TOKEN env variable!', 'error')
         exit(-1)
+    #this right here is my edit to the script=))))
     # launch bot (blocking operation)
     bot.run(os.environ['BOT_TOKEN'])
